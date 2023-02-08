@@ -1,5 +1,5 @@
 ## What is this?
-Serialize form fields to submit a form over ajax
+Serialize form fields to submit a form over ajax request
 
 ## Installation
 
