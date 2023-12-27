@@ -1,6 +1,6 @@
 {
-  "name": "serializeformdata",
-  "version": "1.0.0",
+  "name": "serialize-form-data",
+  "version": "1.0.1",
   "description": "Effortlessly serialize and transmit HTML form data with this powerful package",
   "main": "index.js",
   "type": "module",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:GadhiyaAkash/serialize-form-data.git"
+    "url": "git+ssh://git@github.com/GadhiyaAkash/serialize-form-data.git"
   },
   "bugs": {
     "url": "https://github.com/GadhiyaAkash/serialize-form-data/issues"
