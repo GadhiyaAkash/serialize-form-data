@@ -1,8 +1,9 @@
 {
-  "name": "serialize-form-data",
+  "name": "serializeformdata",
   "version": "1.0.0",
-  "description": "serialize html forms data",
+  "description": "Effortlessly serialize and transmit HTML form data with this powerful package",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -12,7 +12,7 @@ const isDate = (value) => {
 
 const isBlob = (value, isReactNative) => {
     return isReactNative
-        ? isObject(value) && !_.isUndefined(value.uri)
+        ? isObject(value) && (typeof value.uri !== 'undefined')
         : isObject(value) &&
         typeof value.size === 'number' &&
         typeof value.type === 'string' &&
@@ -28,7 +28,7 @@ const isFile = (value, isReactNative) => {
 }
 
 const initCfg = (value) => {
-    return _.isUndefined(value) ? false : value;
+    return typeof value === 'undefined' ? false : value;
 }
 
 const serialize = (obj, cfg, fd, pre) => {
@@ -44,13 +44,13 @@ const serialize = (obj, cfg, fd, pre) => {
 
     const isReactNative = typeof fd.getParts === 'function';
 
-    if (_.isUndefined(obj)) {
+    if (typeof obj === 'undefined') {
         return fd;
-    } else if (_.isNull(obj)) {
+    } else if (obj === null) {
         if (!cfg.nullsAsUndefineds) {
             fd.append(pre, '');
         }
-    } else if (_.isBoolean(obj)) {
+    } else if (typeof obj === 'boolean') {
         if (cfg.booleansAsIntegers) {
             fd.append(pre, obj ? 1 : 0);
         } else {
@@ -97,8 +97,10 @@ const serialize = (obj, cfg, fd, pre) => {
     return fd;
 };
 
-export {
+const serializeformdata = {
     serialize,
     isArray,
     isObject
-}
+};
+
+export default serializeformdata;
