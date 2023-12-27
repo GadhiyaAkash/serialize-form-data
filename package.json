@@ -1,6 +1,6 @@
 {
   "name": "serialize-form-data",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Effortlessly serialize and transmit HTML form data with this powerful package",
   "main": "index.js",
   "type": "module",
