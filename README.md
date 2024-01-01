@@ -31,7 +31,7 @@ var form = document.querySelector('#login-form');
 var string = serializeFormData.serialize(form);
 // string -> "username=admin"
 
-var objectData = serialize(form, { hash: true });
+var objectData = serializeFormData.serialize(form, { hash: true });
 // objectData -> { username: 'admin' }
 ```
 
